@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "d36ddc11-6a33-4571-adb3-69fadaf25f05",
+		"name": "RESTAssessmentPostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List all contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5116/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5116",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5116/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5116",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": {\r\n        \"first\": \"Khan\",\r\n        \"middle\": \"Noonien\",\r\n        \"last\": \"Singh\"\r\n    },\r\n    \"address\": {\r\n        \"street\": \"addressStreet\",\r\n        \"city\": \"addressCity\",\r\n        \"state\": \"addressState\",\r\n        \"zip\": \"addressZip\"\r\n    },\r\n    \"phone\": [\r\n        {\r\n            \"number\": \"555-555-5555\",\r\n            \"type\": \"home\"\r\n        },\r\n        {\r\n            \"number\": \"555-555-5555\",\r\n            \"type\": \"home\"\r\n        }\r\n    ],\r\n    \"email\": \"a@b.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5116/contacts/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5116",
+					"path": [
+						"contacts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5116/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5116",
+					"path": [
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5116/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5116",
+					"path": [
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a call list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5116/contacts/call-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5116",
+					"path": [
+						"contacts",
+						"call-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
